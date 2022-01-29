@@ -7,21 +7,20 @@ let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
 ┌─〔 %me 〕
-├ Hai, %name!
+➪Hai, %name!
 │
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
+➪Limit *%limit Limit*
+➪Role *%role*
+➪Level *%level (%exp / %maxexp)* [%xp4levelup]
+➪%totalexp XP secara Total
 │ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
+➪Date: *%week %weton, %date*
+➪Time: *%time*
 │
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
+➪Uptime: *%uptime (%muptime)*
+➪Database: %rtotalreg dari %totalreg
+➪Github:
+➪%github
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
@@ -196,7 +195,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `Semua Perintah`,
+                  "title": `All Commands`,
                   "description": "",
                   "rowId": `${_p}? all`
                 }, {
@@ -210,11 +209,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "Stiker",
+                  "title": "Sticker",
                   "description": "",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "Kerang Ajaib",
+                  "title": "Magic Shell",
                   "description": "",
                   "rowId": `${_p}? kerangajaib`
                 }, {
@@ -226,7 +225,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "Grup",
+                  "title": "Group",
                   "description": "",
                   "rowId": `${_p}? grup`
                 }, {
@@ -270,7 +269,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "",
                   "rowId": `${_p}? quran`
                 }, {
-                  "title": "Pengubah Suara",
+                  "title": "Audio Commands",
                   "description": "",
                   "rowId": `${_p}? audio`
                 }, {
