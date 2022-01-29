@@ -18,17 +18,15 @@ const defaultMenu = {
 ➪Time: *%time*
 │
 ➪Uptime: *%uptime (%muptime)*
-➪Database: %rtotalreg dari %totalreg
-➪Github:
-➪%github
+➪Developer:ᴀᴊᴍᴀʟ ᴀɴᴅ ᴀᴄʜᴜ
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ🦄*
+```ʜᴏᴘᴇ ʏᴏᴜ ᴀʀᴇ ᴇɴᴊᴏʏɪɴɢ🦄```
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -189,7 +187,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
           "description": "© ᴛᴇᴀᴍ ɴᴀɴᴅʜᴜᴛᴛʏ",
-          "buttonText": "Klik Disini",
+          "buttonText": "Click Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
@@ -376,7 +374,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '© ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ', 'ᴡʜᴏ ɪs ᴛʜᴇ ᴏᴡɴᴇʀ😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -409,19 +407,19 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari"
+  const time = moment.tz('Asia/Kolkata').format('HH')
+  res = "Good Morning 🌄"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Good Morning 🌞"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Good afternoon 🌅"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Good Evening 🌆"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Good Night 🌌"
   }
   return res
 }
