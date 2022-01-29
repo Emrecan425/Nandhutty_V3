@@ -48,7 +48,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let { dl_link, thumb, title, filesize, filesizeF } = yt
   await conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), `*Title:* ${title}
 *Audio File Size:* ${filesizeF}
-*Video File Size:* ${yt2.filesizeF}`, watermark, `🎵 ᴍᴘ3 ${filesizeF}`, `.yta ${vid.url}`, `🎥 ᴍᴘ4 ${yt2.filesizeF}`, `.ytv ${vid.url}`, `▶️Source Url ${dl_link}`, '.sc', reply)
+*Video File Size:* ${yt2.filesizeF}`, watermark, `🎵 ᴍᴘ3 ${filesizeF}`, `.yta ${vid.url}`, `🎥 ᴍᴘ4 ${yt2.filesizeF}`, `.ytv ${vid.url}`, `▶️Source Url`, '.sc', reply)
 }
 handler.help = ['song','play','?'].map(v => v + ' <query>')
 handler.tags = ['downloader']
