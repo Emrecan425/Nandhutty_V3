@@ -143,6 +143,7 @@ global.reloadHandler = function () {
   conn.on('group-update', conn.onGroupUpdate)
   conn.on('CB:action,,call', conn.onCall)
   if (isInit) {
+    conn.on('error', conn.logger.error)
     conn.on('close', () => {
       setTimeout(async () => {
         try {
