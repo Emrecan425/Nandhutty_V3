@@ -10,8 +10,8 @@ key: {
 			"productMessage": {
 				"product": {
 					"productImage":{
-						"mimetype": "image/jpeg",
-						"jpegThumbnail":  fs.readFileSync('./icon.jpeg') ////Gambarny
+						"mimetype": "image/jpg",
+						"jpgThumbnail":  fs.readFileSync('./icon.jpg') ////Gambarny
 					},
 					"title": `Nandhutty`, //Kasih namalu 
 					"description": `%name`, 
