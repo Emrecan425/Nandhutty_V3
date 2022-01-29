@@ -1,24 +1,19 @@
 let limit = 30
-const { servers, yta } = require('../lib/y2mate')
+let fetch = require('node-fetch')
 
-let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
-  if (!args || !args[0]) throw `Pengunaan:\n${usedPrefix + command} <url>\n\nContoh:\n${usedPrefix + command} https://www.youtube.com/watch?v=yxDdj_G9uRY`
-  let chat = db.data.chats[m.chat]
-  let server = (args[1] || servers[0]).toLowerCase()
-  let { dl_link, thumb, title, filesize, filesizeF } = await yta(args[0], servers.includes(server) ? server : servers[0])
-  let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
-  m.reply(isLimit ? `Ukuran File: ${filesizeF}\nUkuran file diatas ${limit} MB, download sendiri: ${dl_link}` : wait)
-  if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
-*Judul:* ${title}
-*Ukuran File:* ${filesizeF}
-`.trim(), m, null, {
-    asDocument: chat.useDocument, mimetype: 'audio/mp4'
-  })
+let handler = async (m, { conn, args, isPrems, isOwner }) => {
+	if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+	let chat = db.data.chats[m.chat]
+	let dl_link = `https://yt-downloader.akkun3704.repl.co/?url=${args[0]}&filter=audioonly&quality=&contenttype=`
+	let json = await (await fetch(`https://yt-downloader.akkun3704.repl.co/yt?url=${args[0]}`)).json()
+	let res = await (await fetch(dl_link)).buffer()
+	let isLimit = (isPrems || isOwner ? 99 : limit) * 1000000 < res.length
+  conn.reply(m.chat,' ```ＤＯＷＮＬＯＡＤＩＮＧ...```', m)
+	if (!isLimit) conn.sendMessage(m.chat, res, chat.useDocument ? 'documentMessage' : 'audioMessage', { quoted: m, filename: json.result.videoDetails.title + '.mp3', mimetype: 'audio/mp4' })
 }
-handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
+handler.help = ['mp3', 'a'].map(v => 'yt' + v)
 handler.tags = ['downloader']
 handler.command = /^yt(a|mp3)$/i
+handler.limit = true
 
-handler.limit = 1
-
-module.exports = handler 
+module.exports = handler
