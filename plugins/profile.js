@@ -40,14 +40,14 @@ XP: TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Siap untuk *${usedPrefix
 Level: ${level}
 Role: *${role}*
 Limit: ${limit}
-Premium: ${prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Ya' : 'Tidak'}
-Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'Tidak'}${lastclaim > 0 ? '\nTerakhir Klaim: ' + new Date(lastclaim).toLocaleString() : ''}
+Premium: ${prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Ya' : 'No'}
+Registered: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'No'}${lastclaim > 0 ? '\nTerakhir Klaim: ' + new Date(lastclaim).toLocaleString() : ''}
 `.trim()
     let mentionedJid = [who]
     conn.sendFile(m.chat, pp, 'pp.jpg', banned ? 'jiakh ke banned' : str, m, false, { contextInfo: { mentionedJid } })
   }
 }
-handler.help = ['profile [@user]']
-handler.tags = ['tools']
-handler.command = /^profile?$/i
+handler.help = ['alive']
+handler.tags = ['main']
+handler.command = /^alive?$/i
 module.exports = handler
