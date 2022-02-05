@@ -1,4 +1,4 @@
-let handler = async (m, { conn, isOwner, text, isAdmin }) => {
+let handler = async(m, { conn, isOwner, text, isAdmin }) => {
   let who
   if (m.isGroup) {
     if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
@@ -12,9 +12,9 @@ let handler = async (m, { conn, isOwner, text, isAdmin }) => {
   try {
     if (who.endsWith('g.us')) db.data.chats[who].isBanned = true
     else db.data.users[who].banned = true
-    m.reply(`*${conn.user.name} sekarang tidak aktif dichat ${conn.getName(who) == undefined ? 'ini' : conn.getName(who)}.`)
-  } catch (e) {
-    throw `jid tidak ada didatabase!`
+    m.reply(`*${conn.user.name} now inactive in chat ${conn.getName(who) == undefined ? 'this' : conn.getName(who)}.`)
+  } catch(e) {
+    throw `jid does not exist in database!`
   }
 }
 handler.help = ['ban']
