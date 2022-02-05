@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.asahotak = conn.asahotak ? conn.asahotak : {}
     let id = m.chat
     if (id in conn.asahotak) {
-        conn.reply(m.chat, 'belum dijawab!', conn.asahotak[id][0])
+        conn.reply(m.chat, 'not answered!', conn.asahotak[id][0])
         throw false
     }
     let res = await fetch(API('amel', '/asahotak', {}, 'apikey'))
@@ -16,21 +16,21 @@ let handler = async (m, { conn, usedPrefix }) => {
     let caption = `
 ${json.soal}
 
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}ao untuk bantuan
+Timeout *${(timeout / 1000).toFixed(2)} seconds*
+Type ${usedPrefix}ao for help
 `.trim()
     conn.asahotak[id] = [
         await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.ao', m),
         json, poin,
         setTimeout(async () => {
-            if (conn.asahotak[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, wm, 'Asah Otak', '.asahotak', conn.asahotak[id][0])
+            if (conn.asahotak[id]) await conn.sendButton(m.chat, `Time is up!\nThe answer is *${json.jawaban}*`, wm, 'Asah Otak', '.asahotak', conn.asahotak[id][0])
             delete conn.asahotak[id]
         }, timeout)
     ]
 }
-handler.help = ['asahotak']
+handler.help = ['use brain']
 handler.tags = ['game']
-handler.command = /^asahotak/i
+handler.command = /^usebrain/i
 
 handler.game = true
 
