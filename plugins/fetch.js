@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let util = require('util')
-let handler = async (m, { text }) => {
-  if (!/^https?:\/\//.test(text)) throw 'Awali *URL* dengan http:// atau https://'
+let handler = async(m, { text }) => {
+  if (!/^https?:\/\//.test(text)) throw 'Prefix *URL* with http:// or https://'
   let _url = new URL(text)
   let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'apikey')
   let res = await fetch(url)
@@ -13,7 +13,7 @@ let handler = async (m, { text }) => {
   let txt = await res.buffer()
   try {
     txt = util.format(JSON.parse(txt + ''))
-  } catch (e) {
+  } catch(e) {
     txt = txt + ''
   } finally {
     m.reply(txt.slice(0, 65536) + '')
@@ -24,4 +24,3 @@ handler.tags = ['internet']
 handler.command = /^(fetch|get)$/i
 
 module.exports = handler
-
