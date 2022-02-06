@@ -1,5 +1,5 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  let txt = `Contoh penggunaan:\n${usedPrefix + command} aku siapa? @${owner[0]} kamu ownerku ><`
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+  let txt = `Example usage:\n${usedPrefix + command} who am I? @${owner[0]} you are my owner ><`
   if (!text) return m.reply(txt)
   let cm = copy(m)
   let who
@@ -17,9 +17,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
   })
 }
-handler.help = ['fitnah <teks> @user <teks>']
+handler.help = ['slander <text> @user <text>']
 handler.tags = ['tools']
-handler.command = /^(fitnah|fakereply)$/
+handler.command = /^(slander|fakereply)$/
 
 module.exports = handler
 
