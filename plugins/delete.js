@@ -1,12 +1,12 @@
-let handler = function (m) {
+let handler = function(m) {
   if (!m.quoted) throw false
   let { chat, fromMe, id, isBaileys } = m.quoted
   if (!fromMe) throw false
-  if (/Stikerin Broadcast/i.test(m.quoted.text)) throw 'Tidak bisa menghapus pesan broadcast!'
-  if (!isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
+  if (/Stickerin Broadcast/i.test(m.quoted.text)) throw 'Could not delete broadcast message!'
+  if (!isBaileys) throw 'The message was not sent by a bot!'
   this.deleteMessage(chat, {
     fromMe,
-    id,
+    en,
     remoteJid: chat
   })
 }
