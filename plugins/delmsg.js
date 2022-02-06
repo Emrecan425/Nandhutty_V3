@@ -1,12 +1,12 @@
-let handler = async (m, { command, usedPrefix, text }) => {
+let handler = async(m, { command, usedPrefix, text }) => {
     let which = command.replace(/del/i, '')
-    if (!text) throw `Gunakan *${usedPrefix}list${which}* untuk melihat daftar nya`
+    if (!text) throw `Use *${usedPrefix}list${which}* to see the list`
     let msgs = global.db.data.msgs
-    if (!text in msgs) throw `'${text}' tidak terdaftar di daftar pesan`
+    if (!text in msgs) throw `'${text}' is not listed in message list`
     delete msgs[text]
-    m.reply(`Berhasil menghapus pesan di daftar pesan dengan nama '${text}'`)
+    m.reply(`Successfully deleted message in message list with name '${text}'`)
 }
-handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'sticker', 'gif'].map(v => 'del' + v + ' <teks>')
+handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'sticker', 'gif'].map(v => 'del' + v + ' <text>' )
 handler.tags = ['database']
 handler.command = /^del(vn|msg|video|audio|img|stic?ker|gif)$/
 
