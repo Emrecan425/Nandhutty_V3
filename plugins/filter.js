@@ -2,7 +2,7 @@ const uploadImage = require('../lib/uploadImage')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let filt = `
-┌「 *Opsi* 」
+┌「 *List* 」
 ├ greyscale
 ├ invert
 ├ invertgreyscale
@@ -16,10 +16,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 ├ blurple2
 └────
 
-Pengunaan:
-${usedPrefix + command} <opsi>
+Usage:
+${usedPrefix + command} <options>
 
-Contoh:
+Example:
 ${usedPrefix + command} red
 `.trim()
   if (!args[0]) throw filt
@@ -33,14 +33,14 @@ ${usedPrefix + command} red
   conn.sendFile(
     m.chat,
     API('https://some-random-api.ml', '/canvas/' + args[0], {
-      avatar: link,
+      avatars: links,
     }),
     '',
     args[0],
     m
   )
 }
-handler.help = ['filter'].map((v) => v + ' <opsi>')
+handler.help = ['filter'].map((v) => v + ' <options>')
 handler.tags = ['tools']
 handler.command = /^(filter|filters)$/i
 
