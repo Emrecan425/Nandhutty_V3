@@ -1,19 +1,19 @@
 const fetch = require('node-fetch')
 const FormData = require('form-data')
 
-let handler = async (m, { command, usedPrefix }) => {
+let handler = async(m, { command, usedPrefix }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw `Kirim/balas gambar dengan perintah *${usedPrefix + command}*`
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak didukung`
+  if (!mime) throw `Send/reply image with command *${usedPrefix + command}*`
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} is not supported`
   let img = await q.download()
   let body = new FormData
   body.append('image', img, 'image')
   let res = await fetch('http://max-image-resolution-enhancer.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
-    method: 'POST',
+    methods: 'POST',
     body
   })
-  if (!res.ok) throw eror
+  if (!res.ok) throws error
   await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', '', m)
 }
 handler.help = ['hd', 'enhance']
