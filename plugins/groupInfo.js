@@ -27,22 +27,22 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
 *ID:* 
 ${groupMetadata.id}
 
-*Nama:* 
+*Name:* 
 ${groupMetadata.subject}
 
-*Deskripsi:* 
+*Description:* 
 ${groupMetadata.desc}
 
-*Total Anggota:*
-${participants.length} Anggota
+*Total Members:*
+${participants.length} Members
 
-*Pembuat Grup:* 
+*Group Creator:* 
 @${ownergc.split`@`[0]}
 
-*Admin Grup:*
+*Group Admins:*
 ${listAdmin}
 
-*Pengaturan Bot:*
+*Bot Settings:*
 ${antiLink ? '✅' : '❌'} Anti Link
 ${antiBadword ? '✅' : '❌'} Anti Badword
 ${global.db.data.chats[m.chat].delete ? '❌' : '✅'} Anti Delete
@@ -56,13 +56,13 @@ ${stiker ? '✅' : '❌'} Stiker
 ${viewonce ? '✅' : '❌'} Viewonce
 ${welcome ? '✅' : '❌'} Welcome
 
-*Pengaturan Pesan Bot:*
+*Bot Message Settings:*
 Welcome: ${sWelcome}
 Bye: ${sBye}
 Promote: ${sPromote}
 Demote: ${sDemote}
 
-*Tersisa:*
+*left:*
 ${msToDate(expired - new Date() * 1)}
 `.trim()
         let mentionedJid = groupAdmins.concat([`${m.chat.split`-`[0]}@s.whatsapp.net`])
