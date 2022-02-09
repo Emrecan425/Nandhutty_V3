@@ -1,17 +1,17 @@
-let handler = async (m, { conn, command, usedPrefix }) => {
-  if (!m.quoted) throw `Balas pesan bot dengan perintah *${usedPrefix + command}*`
+let handler = async(m, { conn, command, usedPrefix }) => {
+  if (!m.quoted) throw `Reply to bot messages with the command *${usedPrefix + command}*`
   if (!m.quoted.fromMe) throw false
   if (!m.quoted.id) throw false
   let members = m.quoted.chat.endsWith('g.us') ? (await conn.groupMetadata(m.quoted.chat)).participants.length - 1 : m.quoted.chat.endsWith('@broadcast') ? -1 : 1
   let { reads, deliveries } = await conn.messageInfo(m.quoted.chat, m.quoted.id)
   let txt = `
-*Dibaca oleh:*
-${reads.sort((a, b) => b.t - a.t).map(({ jid, t }) => `@${jid.split`@`[0]}\n_${formatDate(t * 1000)}_`).join('\n')}
-${members > 1 ? `${members - reads.length} tersisa` : ''}
+*Read by:*
+${reads.sort((a, b) => bt - at).map(({ jid, t }) => `@${jid.split`@`[0]}\n_${formatDate(t * 1000)}_`).join('\n')}
+${members > 1 ? `${members - reads.length} remaining` : ''}
 
-*Terkirim ke:*
-${deliveries.sort((a, b) => b.t - a.t).map(({ jid, t }) => `wa.me/${jid.split`@`[0]}\n_${formatDate(t * 1000)}_`).join('\n')}
-${members > 1 ? `${members - reads.length - deliveries.length} tersisa` : ''}
+*Sent to:*
+${deliveries.sort((a, b) => bt - at).map((({ jid, t }) => `wa.me/${jid.split`@`[0]}\n_${ formatDate(t * 1000)}_`).join('\n')}
+${members > 1 ? `${members - reads.length - deliveries.length} remaining` : ''}
 `.trim()
   m.reply(txt, null, {
     contextInfo: {
