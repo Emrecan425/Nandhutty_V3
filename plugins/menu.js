@@ -185,7 +185,26 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `${ucapan()}, ${name}`.trim(),
+          "title": `╭────ꕥ %me ꕥ────
+│✾ Version: %version
+│✾ Library: Baileys-MD
+│✾ Runtime: %uptime
+╰❑
+╭─❑ 「 INFO USER 」 ❑──
+│ ✾ Name: %name
+│ ✾ Total Features : ${totalfeature}
+│ ✾ Limit: %limit
+│ ✾ Money: %money
+│ ✾ Exp: %totalexp
+│ ✾ Level: %level
+│ ✾ Role: %role
+│ ✾ Number of Registered Users : %rtotalreg From %totalreg
+╰❑
+╭─❑ 「 INFORMATION 」 ❑──
+│ This bot is still in testing stage
+│ if there is a bug / error please
+│ report it to the owner
+╰❑`.trim(),
           "description": "© ᴛᴇᴀᴍ ɴᴀɴᴅʜᴜᴛᴛʏ",
           "buttonText": "Click Here",
           "listType": "SINGLE_SELECT",
