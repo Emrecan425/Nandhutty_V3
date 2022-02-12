@@ -375,9 +375,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '© ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ', 'ᴡʜᴏ ɪs ᴛʜᴇ ᴏᴡɴᴇʀ😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
+    await conn.send5ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '© ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ', 'ᴏᴡɴᴇʀ😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, 'ʀᴜʟᴇs, `${_p}owner`, 'ᴀʟɪᴠᴇ', `${_p}owner`, 'ɴɪᴄᴇ', `${_p}owner`, m)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Can't send menu something went wrong', m)
     throw e
   }
 }
