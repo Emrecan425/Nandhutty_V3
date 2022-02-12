@@ -185,10 +185,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `╭────ꕥ ${name} ꕥ────\n\│✾ Version: ɴᴀɴᴅʜᴜᴛᴛʏv3 \n\│✾ Library: Baileys\n\│✾ Runtime: ${uptime} \n\╰❑\n\╭─❑ 「 INFO USER 」 ❑──\n\│ ✾ Name: ${name} \n\│ ✾ Total Features : 100+\n\│ ✾ Limit: ${limit} \n\│ ✾ Date: ${date} \n\│ ✾ Exp: hehe \n\│ ✾ Level: ${level} \n\│ ✾ Role: ${role} \n\│ ✾ Number of Registered Users : hege From hehe \n\╰❑\n\╭─❑ 「 INFORMATION 」 ❑──\n\│ This bot is still in testing stage\n\│ if there is a bug \ error please\n\│ report it to the owner\n\╰❑`.trim(),
+          "title": `╭────ꕥ ${name} ꕥ────\n\│✾ Version: v3 \n\│✾ Library: Baileys\n\│✾ Runtime: ${uptime} \n\╰❑\n\╭─❑ 「 INFO USER 」 ❑──\n\│ ✾ Name: ${name} \n\│ ✾ Total Features : 100+\n\│ ✾ Limit: ${limit} \n\│ ✾ Date: ${date} \n\│ ✾ Exp: ${exp} \n\│ ✾ Level: ${level} \n\│ ✾ Role: ${role} \n\│ ✾ Storage: 106/128 Gb \n\╰❑\n\╭─❑ 「 INFORMATION 」 ❑──\n\│ This bot is still in testing stage\n\│ if there is a bug \ error please\n\│ report it to the owner\n\╰❑`.trim(),
           "description": "ᴅᴏɴᴛ sᴘᴀᴍ",
           "buttonText": "Click Here",
-          "footerText": "ᴅᴇᴠᴏʟᴏᴘᴇᴅ ʙʏ ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ",
+          "footerText": "ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
