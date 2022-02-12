@@ -185,7 +185,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `╭────ꕥ ${name} ꕥ────\n\│✾ Version: ɴᴀɴᴅʜᴜᴛᴛʏv3 \n\│✾ Library: Baileys\n\│✾ Runtime: ${uptime} \n\╰❑\n\╭─❑ 「 INFO USER 」 ❑──\n\│ ✾ Name: ${name} \n\│ ✾ Total Features : 100+\n\│ ✾ Limit: ${limit} \n\│ ✾ Date: ${date} \n\│ ✾ Exp: ${totalexp} \n\│ ✾ Level: ${level} \n\│ ✾ Role: ${role} \n\│ ✾ Number of Registered Users : ${rtotalreg} From ${totalreg} \n\╰❑\n\╭─❑ 「 INFORMATION 」 ❑──\n\│ This bot is still in testing stage\n\│ if there is a bug \ error please\n\│ report it to the owner\n\╰❑`.trim(),
+          "title": `╭────ꕥ ${name} ꕥ────\n\│✾ Version: ɴᴀɴᴅʜᴜᴛᴛʏv3 \n\│✾ Library: Baileys\n\│✾ Runtime: ${uptime} \n\╰❑\n\╭─❑ 「 INFO USER 」 ❑──\n\│ ✾ Name: ${name} \n\│ ✾ Total Features : 100+\n\│ ✾ Limit: ${limit} \n\│ ✾ Date: ${date} \n\│ ✾ Exp: hehe \n\│ ✾ Level: ${level} \n\│ ✾ Role: ${role} \n\│ ✾ Number of Registered Users : hege From hehe \n\╰❑\n\╭─❑ 「 INFORMATION 」 ❑──\n\│ This bot is still in testing stage\n\│ if there is a bug \ error please\n\│ report it to the owner\n\╰❑`.trim(),
           "description": "© ᴛᴇᴀᴍ ɴᴀɴᴅʜᴜᴛᴛʏ",
           "buttonText": "Click Here",
           "footerText": "ɴᴀɴᴅʜᴜᴛᴛʏv3",
