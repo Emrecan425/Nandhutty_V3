@@ -1,9 +1,9 @@
 // Thanks to TOXIC-DEVIL
 // https://github.com/TOXIC-DEVIL
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args || !args[0] || args.length === 0) throw `uhm.. nomornya mana?\n\ncontoh:\n${usedPrefix + command} 6285157336614`
-    if (args[0].startsWith('0')) throw 'Gunakan kode Negara!'
+let handler = async(m, { conn, args, usedPrefix, command }) => {
+    if (!args || !args[0] || args.length === 0) throw `uhm.. what's the number?\n\nexample:\n${usedPrefix + command} 918590508376`
+    if (args[0].startsWith('0')) throw 'Use Country code!'
     let user = await conn.isOnWhatsApp(args[0])
     let exists = user && user.exists ? true : false
     if (exists) {
@@ -14,25 +14,25 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             if (participants.some(v => v.jid === user.jid)) sameGroup.push(gc.jid)
         }
         if (user.jid in global.db.data.users) isInDatabase = true
-        let str = ` 
-*Nama:* ${conn.getName(user.jid)}
-*Nomor:* ${splitM(user.jid)}
+        let str = `
+*Name:* ${conn.getName(user.jid)}
+*Number:* ${splitM(user.jid)}
 *Mention:* ${toM(user.jid)}
-*Api:* wa.me/${splitM(user.jid)}
+*api:* wa.me/${splitM(user.jid)}
 *Jid:* ${user.jid}
-*Whatsapp Bussines:* ${user.isBusiness ? 'Ya' : 'Tidak'}
-*Di Database:* ${isInDatabase ? 'Ya' : 'Tidak'}
-*Grup Yang Sama Dengan BOT:* ${sameGroup.length} *Grup*
+*Whatsapp Bussines:* ${user.isBusiness ? 'Yes No'}
+*In Database:* ${isInDatabase ? 'Yes No'}
+*Same Group as BOT:* ${sameGroup.length} *Group*
 `.trim()
         m.reply(str, m.chat, {
             contextInfo: {
                 mentionedJid: conn.parseMention(str)
             }
         })
-    } else throw 'nomor tidak terdaftar'
+    } else throw 'unregistered number'
 }
 
-handler.help = ['scan'].map(v => v + ' [nomor]')
+handler.help = ['scan'].map(v => v + ' [number]')
 handler.tags = ['tools']
 handler.command = /^scan$/i
 
