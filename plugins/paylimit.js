@@ -1,6 +1,6 @@
 let pajak = 0.02
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    let fail = `perintah ini buat ngasih limit ke pengguna lain\n\ncontoh:\n${usedPrefix + command} @6285157336614 10\natau balas pesan doi dengan perintah: ${usedPrefix + command} 10`
+    let fail = `This command makes NASUK LIMIT TO OTHER USERS\n\ncontoh:\n${usedPrefix + command} @6285157336614 10\nor reply to the message by the command: ${usedPrefix + command} 10`
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     else who = m.chat
@@ -32,14 +32,14 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['6285157336614@s.whatsapp.net'] } })
         throw false
     }
-    if (isNaN(txt)) throw 'Hanya angka'
+    if (isNaN(txt)) throw 'Only number'
     let poin = parseInt(txt)
     let limit = poin
     let pjk = Math.ceil(poin * pajak)
     limit += pjk
     if (limit < 1) throw 'minimal 1'
     let users = global.db.data.users
-    if (limit > users[m.sender].limit) throw 'Limit tidak mencukupi untuk mentransfer, ada pajaknya juga'
+    if (limit > users[m.sender].limit) throw 'Limit is not sufficient to transfer, there is a tax too'
     users[m.sender].limit -= limit
     users[who].limit += poin
 
