@@ -194,97 +194,97 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `All Commands`,
+                  "title": `𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬`,
                   "description": "",
                   "rowId": `${_p}? all`
                 }, {
-                  "title": "Game",
+                  "title": "𝐆𝐚𝐦𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
                   "description": "",
                   "rowId": `${_p}? game`
 
                 }, {
-                  "title": "XP",
+                  "title": "𝐗𝐏",
                   "description": "",
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "Sticker",
+                  "title": "𝐒𝐭𝐢𝐜𝐤𝐞𝐫",
                   "description": "",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "Magic Shell",
+                  "title": "𝐌𝐚𝐠𝐢𝐜 𝐒𝐡𝐞𝐥𝐥",
                   "description": "",
                   "rowId": `${_p}? kerangajaib`
                 }, {
-                  "title": "Quotes",
+                  "title": "𝐐𝐨𝐮𝐭𝐞𝐬",
                   "description": "",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "Admin",
+                  "title": "𝐀𝐝𝐦𝐢𝐧",
                   "description": "",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "Group",
+                  "title": "𝐆𝐫𝐨𝐮𝐩",
                   "description": "",
                   "rowId": `${_p}? grup`
                 }, {
-                  "title": "Premium",
+                  "title": "𝐏𝐫𝐞𝐦𝐢𝐧𝐮𝐦",
                   "description": "",
                   "rowId": `${_p}? premium`
                 }, {
-                  "title": "Internet",
+                  "title": "𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭",
                   "description": "",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "Anonymous",
+                  "title": "𝐀𝐧𝐨𝐧𝐲𝐦𝐨𝐮𝐬",
                   "description": "",
                   "rowId": `${_p}? anonymous`
                 }, {
-                  "title": "Nulis & Logo",
+                  "title": "𝐍𝐮𝐥𝐢𝐬 𝐀𝐍𝐝 𝐋𝐨𝐠𝐨",
                   "description": "",
                   "rowId": `${_p}? nulis`
                 }, {
-                  "title": "Downloader",
+                  "title": "𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",
                   "description": "",
                   "rowId": `${_p}? downloader`
                 }, {
-                  "title": "Tools",
+                  "title": "𝐓𝐨𝐨𝐥𝐬",
                   "description": "",
                   "rowId": `${_p}? tools`
                 }, {
-                  "title": "Fun",
+                  "title": "𝐅𝐮𝐧",
                   "description": "",
                   "rowId": `${_p}? fun`
                 }, {
-                  "title": "Database",
+                  "title": "𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞",
                   "description": "",
                   "rowId": `${_p}? database`
                 }, {
-                  "title": "Vote & Absen",
+                  "title": "𝐕𝐨𝐭𝐞 𝐀𝐍𝐝 𝐀𝐛𝐬𝐞𝐧",
                   "description": "",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "Logo Maker",
+                  "title": "𝐋𝐨𝐠𝐨 𝐌𝐚𝐤𝐞𝐫",
                   "description": "",
                   "rowId": `${_p}? textpro`
                 }, {
-                  "title": "Audio Commands",
+                  "title": "𝐀𝐮𝐝𝐢𝐨 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
                   "description": "",
                   "rowId": `${_p}? audio`
                 }, {
-                  "title": "Jadi Bot",
+                  "title": "𝐉𝐚𝐝𝐢 𝐁𝐨𝐭",
                   "description": "",
                   "rowId": `${_p}? jadibot`
                 }, {
-                  "title": "Info",
+                  "title": "𝐈𝐧𝐟𝐨",
                   "description": "",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "Tanpa Kategori",
+                  "title": "𝐓𝐚𝐧𝐩𝐚 𝐂𝐚𝐭𝐞𝐠𝐨𝐫𝐲",
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "Owner",
+                  "title": "𝐎𝐰𝐧𝐞𝐫",
                   "description": "",
                   "rowId": `${_p}? owner`
                 }
