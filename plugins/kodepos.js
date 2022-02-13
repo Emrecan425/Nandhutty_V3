@@ -1,17 +1,17 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { text, usedPrefix, command }) => {
-    if (!text) throw `Pengunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} Lamongan`
+    if (!text) throw `Use:\n${usedPrefix + command} <text>\n\nExample:\n${usedPrefix + command} Lamongan`
     let res = await fetch(API('xteam', '/kodepos', { q: text }, 'APIKEY'))
     if (!res.ok) throw `${res.status} ${res.statusText}`
     let json = await res.json()
     if (!json.status) throw json
-    let mes = json.result.map((v, i) => `${i + 1}. Provinsi: ${v.province}\nKota: ${v.city}\nKecamatan: ${v.subdistrict}\nPerkotaan: ${v.urban}\nKode Pos: ${v.postalcode}`).join('\n\n')
+    let mes = json.result.map((v, i) => `${i + 1}. Province: ${v.province}\nCity: ${v.city}\nDistricts: ${v.subdistrict}\nUrban: ${v.urban}\nPostal code: ${v.postalcode}`).join('\n\n')
     m.reply(mes)
 }
-handler.help = ['kodepos <kota>']
+handler.help = ['postalcode <city>']
 handler.tags = ['tools']
-handler.command = /^kodepos$/i
+handler.command = /^postalcode$/i
 
 handler.limit = 0
 
