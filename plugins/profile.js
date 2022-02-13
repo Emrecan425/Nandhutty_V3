@@ -35,16 +35,16 @@ let handler = async (m, { conn, usedPrefix }) => {
     let str = `
 *Name* : ${username} ${registered ? '(' + name + ') ' : ''}(@${who.replace(/@.+/, '')})${about != 401 ? '\nInfo: ' + about : ''}
 *Number* : ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-*Link* : https://wa.me/${who.split`@`[0]}${registered ? '\nUmur: ' + age : ''}
+*Link* : https://wa.me/${who.split`@`[0]}${registered ? '\nAge: ' + age : ''}
 *XP* : TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready for *${usedPrefix}levelup*` : `${math} Need more XP for levelup`}]
 *Level* : ${level}
 *Role* : *${role}*
 *Limit* : ${limit}
-*Premium* : ${prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Ya' : 'No'}
-*Registered* : ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'No'}${lastclaim > 0 ? '\nTerakhir Klaim: ' + new Date(lastclaim).toLocaleString() : ''}
+*Premium* : ${prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Yes' : 'No'}
+*Registered* : ${registered ? 'Yes (' + new Date(regTime).toLocaleString() + ')' : 'No'}${lastclaim > 0 ? '\nLast Claim: ' + new Date(lastclaim).toLocaleString() : ''}
 `.trim()
     let mentionedJid = [who]
-    conn.sendFile(m.chat, pp, 'pp.jpg', banned ? 'jiakh ke banned' : str, m, false, { contextInfo: { mentionedJid } })
+    conn.sendFile(m.chat, pp, 'pp.jpg', banned ? 'if you get banned' : str, m, false, { contextInfo: { mentionedJid } })
   }
 }
 handler.help = ['alive']
