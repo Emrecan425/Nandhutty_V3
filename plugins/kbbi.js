@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { text, command, usedPrefix }) => {
-    if (!text) throw `Pengunaan:\n${usedPrefix + command} <teks>\n\ncontoh:\n${usedPrefix + command} membaca`
+    if (!text) throw `Use:\n${usedPrefix + command} <text>\n\nexample:\n${usedPrefix + command} read`
     let res = await fetch(API('pencarikode', '/kbbi', { kata: text }, 'APIKEY'))
     if (!res.ok) throw eror
     let json = await res.json()
@@ -12,7 +12,7 @@ let handler = async (m, { text, command, usedPrefix }) => {
 ${list}
 `.trim())
 }
-handler.help = ['kbbi <teks>']
+handler.help = ['kbbi <text>']
 handler.tags = ['internet']
 handler.command = /^kbbi$/i
 
