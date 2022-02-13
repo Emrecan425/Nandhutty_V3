@@ -1,7 +1,7 @@
 let fetch = require("node-fetch");
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `Pokemonnya mana?`;
+  if (!args[0]) throw `Where's the Pokemon??`;
   let res = await fetch(
     API("https://some-random-api.ml", "/pokedex", { pokemon: args[0] })
   );
