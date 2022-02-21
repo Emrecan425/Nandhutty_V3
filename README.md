@@ -1,8 +1,8 @@
 
-# Nandhutty_V3
+# ARJUNsER_V3
 
 <div align="center">
-  <img border-radius: 15px src="https://i.imgur.com/J9ypAcp.jpeg" width="200" height="200"/>
+  <img border-radius: 15px src="https://i.imgur.com/NHiosAz.jpeg" width="200" height="200"/>
 
 <p align="center">
   <a href="https://instagram.com/ajmal_ibn_shanavas"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
@@ -89,7 +89,7 @@ Click WA logo to Join Support Group 👇
 ----|
    `Re-Developer, Bug Fixes, Modules, Commits`
 
-   [![DEVILSER](https://i.imgur.com/CqEfYef.jpeg)](https://github.com/DEVILSER)[`DEVILSER`](https://github.com/DEVILSER)
+   [![ARJUNSER](https://i.imgur.com/NHiosAz.jpeg)](https://github.com/Arjun-ser-ofc)[`ARJUNSER`](https://github.com/Arjun-ser-ofc)
 ----|
    `Bug Fixes, Modules, Commits`
 
