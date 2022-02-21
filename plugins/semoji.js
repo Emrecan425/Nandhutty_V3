@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
 *${usedPrefix}emo(spasi)ap(spasi)❤️*
 *${usedPrefix}emo ap ❤️*
 
-┌〔 Opsi 〕
+┌〔 Options 〕
 ├ ap = apple
 ├ fa = facebook
 ├ go = google
@@ -23,9 +23,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
 ├ wh = whatsapp
 └────
 
-Hanya bisa 1 emoji, perhatikan spasi, jangan spam!
-
-Mau bikin stiker bisa 2/3 emoji? klik http://wa.me/62851577296390?text=%23stikeremoji`
+Can only 1 emoji, pay attention to spaces, don't spam!`
   if (!args[0]) throw er
 
   let template = (args[0] || '').toLowerCase()
