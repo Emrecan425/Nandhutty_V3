@@ -1,8 +1,8 @@
 
-# Wizard-Ser
+# Nandhutty_V3
 
 <div align="center">
-  <img border-radius: 15px src="https://i.imgur.com/1PWx69w.jpeg" width="200" height="200"/>
+  <img border-radius: 15px src="https://i.imgur.com/J9ypAcp.jpeg" width="200" height="200"/>
 
 <p align="center">
   <a href="https://instagram.com/ajmal_ibn_shanavas"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
@@ -27,7 +27,7 @@
 ----------
 
 <p align="center">
-  <a href="https://youtu.be/5shzvYdTasw"><img src="https://i.imgur.com/XkDscpl.jpeg" />
+  <a href="https://youtu.be/5shzvYdTasw"><img src="https://telegra.ph/file/1b06aa3851c72d40f7a8f.jpg" />
 </p>
 
 -------
