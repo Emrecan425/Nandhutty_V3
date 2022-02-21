@@ -1,5 +1,5 @@
 let fs = require('fs')
-global.owner = ['918590967139','919656459062','919744196187'] // Letakan nomor kamu disini
+global.owner = ['916238440754','3584460000602','4915147778309'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 global.APIs = { // API Prefix
@@ -35,8 +35,8 @@ function _0x3dc2(_0x4d22a2,_0x4bda1a){var _0x5e0a56=_0x5e0a();return _0x3dc2=fun
 
 global.wait = '_*Please Wait..*_'
 global.eror = '_*Server Error*_'
-global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
-global.watermark = '© ᴛᴇᴀᴍ ɴᴀɴᴅʜᴜᴛᴛʏ'
+global.fla = 'https://github.com/Ajmal-Achu/Nandhutty_V3/blob/main/lib/20220204_171905.jpg'
+global.watermark = '©  ᴀʀᴊᴜɴ𝑆ᴇʀ'
 
 global.multiplier = 69 // Semakin tinggi, semakin sulit naik level
 
