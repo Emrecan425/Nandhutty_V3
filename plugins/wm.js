@@ -18,14 +18,14 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       let out = await uploadImage(img)
       stiker = await sticker5(0, out, packname || '', author || '')
     } else if (/video/.test(mime)) {
-      if ((q.msg || q).seconds > 11) return m.reply('maks 10 detik!')
+      if ((q.msg || q).seconds > 11) return m.reply('max 10 sec!')
       let img = await q.download()
       let out = await uploadImage(img)
       stiker = await sticker5(0, out, packname || '', author || '')
     }
   } finally {
     if (stiker) await conn.sendFile(m.chat, stiker, '', '', m, 0, { asSticker: true })
-    else throw `Balas stiker dengan perintah *${usedPrefix + command} <teks>|<teks>*`
+    else throw `Reply sticker with command *${usedPrefix + command} <teks>|<teks>*`
   }
 }
 handler.help = ['wm <teks>|<teks>']
