@@ -7,9 +7,9 @@ let handler = async (m, { text, usedPrefix, command }) => {
     switch (v.type) {
       case 'video': return `
 *${v.title}* (${v.url})
-Durasi: ${v.timestamp}
-Diupload ${v.ago}
-${v.views} Penonton
+Duration: ${v.timestamp}
+Uploaded ${v.ago}
+${v.views} Viewer
       `.trim()
       case 'channel': return `
 *${v.name}* (${v.url})
