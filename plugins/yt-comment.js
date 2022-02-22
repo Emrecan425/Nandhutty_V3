@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `Pengunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} ini komen`
+  if (!text) throw `Use:\n${usedPrefix + command} <teks>\n\nExample:\n${usedPrefix + command} this is a comment`
   conn.sendFile(m.chat, API('https://some-random-api.ml', '/canvas/youtube-comment', {
     avatar: await conn.getProfilePicture(m.sender).catch(_ => ''),
     comment: text,
