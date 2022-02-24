@@ -36,7 +36,7 @@ function _0x3dc2(_0x4d22a2,_0x4bda1a){var _0x5e0a56=_0x5e0a();return _0x3dc2=fun
 global.wait = '_*Please Wait..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://github.com/Ajmal-Achu/Nandhutty_V3/blob/main/lib/20220204_171905.jpg'
-global.watermark = '©  ᴀʀᴊᴜɴ𝑆ᴇʀ'
+global.watermark = '© ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3'
 
 global.multiplier = 69 // Semakin tinggi, semakin sulit naik level
 
